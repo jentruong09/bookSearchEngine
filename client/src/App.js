@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// Switch
 
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
@@ -26,12 +27,12 @@ function App() {
     <Router>
       <>
         <Navbar />
-        <Switch>
+        {/* <Switch>
           <Route exact path = '/' component={SearchBooks}/>
           <Route exact path = '/saved' component={SavedBooks}/>
           <Route render = {() => <h1 className='message'> Wrong Page/Route! </h1>} />
-        </Switch>
-        {/* <Routes>
+        </Switch> */}
+        <Routes>
           <Route 
             path='/' 
             element={<SearchBooks />} 
@@ -44,7 +45,7 @@ function App() {
             path='*'
             element={<h1 className='display-2'>Wrong page!</h1>}
           />
-        </Routes> */}
+        </Routes>
       </>
     </Router>
     </ApolloProvider>
